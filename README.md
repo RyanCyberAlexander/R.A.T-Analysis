@@ -33,9 +33,13 @@ In this project, I first set up a controlled environment to perform the analysis
    - **Imported CSV Data**: After parsing the **PCAP data** into a **CSV format**, I imported the data into **Splunk** to gain better insight into the volume and patterns of the network traffic.
    - **Generated Reports**: I generated multiple reports to visualize the network traffic, focusing on:
      - **Top Destinations (IP addresses)**: Identified which IPs the RAT communicated with the most. The ip 10.3.10.101, which accounted for 8,209 occurrences, or 73.531% of the total events was reported to the most from the R.A.T. Since this is a 10.x.x.x ip this makes me believe the R.A.T is on a local machine more likely an active directory. This is where I struggled the most. I could not figure out why I could not see failed logins and thought I was doing something wrong. I googled it and found out since the R.A.T was using encryption it could hide login attempts from me. This made me feel better as I was very lost on this part of the project.
-     - **Protocols Used**: Determined which protocols (TCP, TLS) were employed by the RAT for communication. I could not find failed logins, this made me believe the R.A.T already had credentials it harvested. Or, it could have encrypted the failed logins with the TLS protocol.
-     - **Packet Length Analysis**: Visualized the distribution of packet sizes to help identify potential data exfiltration patterns. The packet lengths are large. A lot go over 1500 which probably means the packet header is increasing the size of the packets because from Splunk the largest packets I found were 1460.
-   - **Created Dashboards**: Visualized the findings using **Splunk’s visualization tools** (e.g., tables, bar charts) for better data interpretation.
+    
+![image](https://github.com/user-attachments/assets/36731461-318b-49de-8e76-4c974f4d4ad2)
+
+
+- **Protocols Used**: Determined which protocols (TCP, TLS) were employed by the RAT for communication. I could not find failed logins, this made me believe the R.A.T already had credentials it harvested. Or, it could have encrypted the failed logins with the TLS protocol.
+- **Packet Length Analysis**: Visualized the distribution of packet sizes to help identify potential data exfiltration patterns. The packet lengths are large. A lot go over 1500 which probably means the packet header is increasing the size of the packets because from Splunk the largest packets I found were 1460.
+- **Created Dashboards**: Visualized the findings using **Splunk’s visualization tools** (e.g., tables, bar charts) for better data interpretation.
 
 ### 4. **Conclusion**
    - The analysis revealed that the RAT was communicating with multiple C2 servers, sending data in encrypted packets, and utilizing large packet sizes, which likely indicate attempts to exfiltrate data. By mapping this traffic and using **Splunk** for further analysis, I was able to identify several potential **Command and Control (C2) IPs** and the **traffic patterns** they exhibited.
