@@ -42,6 +42,9 @@ In this project, I first set up a controlled environment to perform the analysis
 ![image](https://github.com/user-attachments/assets/5d7b6fc4-76c4-40a9-b196-76685927ea27)
 
 - **Packet Length Analysis**: Visualized the distribution of packet sizes to help identify potential data exfiltration patterns. The packet lengths are large. A lot go over 1500 which probably means the packet header is increasing the size of the packets because from Splunk the largest packets I found were 1460.
+
+![image](https://github.com/user-attachments/assets/af7a9a94-f06c-487d-a436-0ae3eb7e9980)
+
 - **Created Dashboards**: Visualized the findings using **Splunk’s visualization tools** (e.g., tables, bar charts) for better data interpretation.
 
 ### 4. **Conclusion**
