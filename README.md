@@ -47,8 +47,11 @@ In this project, I first set up a controlled environment to perform the analysis
 
 - **Created Dashboards**: Visualized the findings using **Splunk’s visualization tools** (e.g., tables, bar charts) for better data interpretation.
 
-### 4. **Conclusion**
-   - The analysis revealed that the RAT was communicating with multiple C2 servers, sending data in encrypted packets, and utilizing large packet sizes, which likely indicate attempts to exfiltrate data. By mapping this traffic and using **Splunk** for further analysis, I was able to identify several potential **Command and Control (C2) IPs** and the **traffic patterns** they exhibited.
+### 4. **Mistake and something I learned**
+One challenge I faced was accidentally uploading the CSV file multiple times into Splunk. At first, I didn’t realize that Splunk indexes data, meaning each upload was stacking on top of the previous one. This led to inaccurate and duplicated data in my visualizations. Once I recognized the issue, I restarted the Splunk portion of my project, ensuring that I only uploaded the data once. This mistake taught me an important lesson about how Splunk handles data ingestion and reinforced the importance of verifying my dataset before analyzing it.
+
+### 5. **Conclusion**
+The analysis revealed that the RAT was communicating with multiple C2 servers, sending data in encrypted packets, and utilizing large packet sizes, which likely indicate attempts to exfiltrate data. By mapping this traffic and using **Splunk** for further analysis, I was able to identify several potential **Command and Control (C2) IPs** and the **traffic patterns** they exhibited.
 
 Here is a list of the tools used for the analysis:
 
