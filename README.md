@@ -59,4 +59,5 @@ Here is a list of the tools used for the analysis:
 - **Splunk**: [Splunk Download](https://www.splunk.com/en_us/download.html)
 - **VirtualBox**: [VirtualBox Download](https://www.virtualbox.org/wiki/Downloads)
 
+I have also put the Remcos R.A.T infection pcap in a different branch as well as the R.A.T infection pcap CSV log file in another branch.
  
