@@ -26,7 +26,7 @@ In this project, I first set up a controlled environment to perform the analysis
 
 ### 2. **PCAP File Analysis with Wireshark**
    - **Captured Network Traffic**: I loaded the provided **PCAP file** into **Wireshark** to observe the raw packet data.
-   - **Identified Key Protocols**: I identified that the RAT primarily used **TCP** and **TLS** (specifically **TLSv1.2** and **TLSv1.3**) for encrypted communication with the Command and Control (C2) server. I put the url 206.123.152.51 in virus total and saw it was flagged for being malicious by a few sites.
+   - **Identified Key Protocols**: I identified that the RAT primarily used **TCP** and **TLS** (specifically **TLSv1.2** and **TLSv1.3**) for encrypted communication with the Command and Control (C2) server. I put the url 206.123.152.51 in virus total and saw it was flagged for being malicious by a few Vendors. The vendors that marked it as malicious were AlphaSoc and Fortinet 
    - **Analyzed Traffic Patterns**: I analyzed the traffic for indicators of compromise (IoCs), such as unusual **destination IPs** and **large packet sizes**, which could be indicative of **data exfiltration**.
 
 ### 3. **Data Aggregation and Visualization with Splunk**
